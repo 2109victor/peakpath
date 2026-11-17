@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="PeakPath helps you find treks near your city with distance, weather, best season and packing list.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PeakPath – Find Your Next Trek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>🌄 PeakPath</h1>
+<p>Pick your starting city, find treks near you, and know the weather, best season and what to pack — all in one place.</p>
+<div class="stats"><div class="stat"><b id="sCount">8</b>Treks</div><div class="stat"><b>8</b>Start cities</div><div class="stat"><b id="sNear">–</b>Nearest trek</div></div>
+</div></header>
+
+<nav><div class="wrap"><a href="#treks">Treks</a><a href="#compare">Compare</a><a href="#pack">Packing List</a><a href="#tips">Safety Tips</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+
+<section id="treks"><div class="wrap">
+<h2>Explore Treks</h2>
+<p class="sub" id="startTxt"></p>
+<div class="loc-panel">
+<button class="chip on" id="gps">📍 Use my current location</button>
+<select id="city" aria-label="Choose starting city"></select>
+<span id="locStatus" class="loc"></span>
+</div>
+<div class="controls">
+<input id="q" placeholder="Search a trek or place…" aria-label="Search">
+<select id="rad" aria-label="Distance range"><option value="100">Within 100 km</option><option value="200">Within 200 km</option><option value="350" selected>Within 350 km</option><option value="9999">Any distance</option></select><button class="chip on" data-f="All">All</button><button class="chip" data-f="Easy">Easy</button><button class="chip" data-f="Moderate">Moderate</button><button class="chip" data-f="Hard">Hard</button>
+</div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="compare"><div class="wrap">
+<h2>Quick Compare</h2><p class="sub" id="cmpTxt"></p>
+<div class="table-scroll"><table><thead><tr><th>Trek</th><th>Distance</th><th>Drive</th><th>Trek time</th><th>Level</th><th>Best months</th></tr></thead><tbody id="tb"></tbody></table></div>
+</div></section>
+
+<section id="pack"><div class="wrap">
+<h2>Packing Checklist</h2><p class="sub">Tick items as you pack. Pick a trek type to add extras.</p>
+<div class="controls" id="ptype"><button class="chip on" data-t="day">Day hike</button><button class="chip" data-t="hill">Hill / Monsoon</button><button class="chip" data-t="camp">Overnight camp</button></div>
+<p class="prog" id="prog"></p>
+<div class="pack" id="packGrid"></div>
+</div></section>
+
+<section id="tips"><div class="wrap">
+<h2>Safety &amp; Trail Etiquette</h2><p class="sub">Small habits that keep you and the mountains safe.</p>
+<div class="tips">
+<div class="tip"><b>Start early</b><br>Begin by 5–6 AM to avoid heat and finish before dark.</div>
+<div class="tip"><b>Hydrate</b><br>Carry 2–3 litres and sip every 20 minutes.</div>
+<div class="tip"><b>Leave no trace</b><br>Carry back all plastic and wrappers. Don't pluck plants.</div>
+<div class="tip"><b>Tell someone</b><br>Share your route and return time with family.</div>
+<div class="tip"><b>Check permits</b><br>Many forest treks need Forest Dept. permission or a guide.</div>
+<div class="tip"><b>Monsoon caution</b><br>Leeches, slippery rocks, swollen streams — avoid risky crossings.</div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2>About PeakPath</h2>
+<p class="sub">PeakPath helps beginners and weekend trekkers find treks near their city, with distance, weather, best season and a packing list in one place. We cover 32 treks around 8 southern and western Indian cities, and we're growing.</p>
+<div class="tip"><b>⚠️ Please note</b><br>Distances and conditions are approximate. Always check weather, permits and forest department rules before you go, and trek with a group or guide where required.</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact &amp; Suggestions</h2>
+<p class="sub">Know a great trek we missed, or found something wrong? Tell us.</p>
+<div class="card" style="max-width:520px">
+<input id="cn" placeholder="Your name" aria-label="Your name" class="fld">
+<textarea id="cm" rows="4" placeholder="Trek suggestion or feedback…" aria-label="Message" class="fld"></textarea>
+<a id="send" class="dir" href="#contact">✉️ Send by email</a>
+</div>
+</div></section>
+
+<footer>Made for trekkers 🌿 · Distances &amp; conditions are approximate; check local forest dept and weather before you go.</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
